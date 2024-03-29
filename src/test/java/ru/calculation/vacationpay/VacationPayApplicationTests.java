@@ -22,7 +22,7 @@ class VacationPayApplicationTests {
     @Test
     public void testGetVacationPay() {
         double expected = 11945.392491467577;
-        assertEquals(expected, calculationService.getVacationPay(50000.00, 7));
+        assertEquals(expected, calculationService.getVacationPay(600000.00, 7));
     }
 
     @Test
@@ -34,7 +34,7 @@ class VacationPayApplicationTests {
     @Test
     public void testMinusSalary() {
         HttpStatus expected = HttpStatus.BAD_REQUEST;
-        assertEquals(expected, calculationController.getVacationPay(-50000, 14).getStatusCode());
+        assertEquals(expected, calculationController.getVacationPay(-600000.00, 14).getStatusCode());
     }
 
 
